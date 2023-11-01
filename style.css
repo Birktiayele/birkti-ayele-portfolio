@@ -1,0 +1,515 @@
+*{
+    margin: 0;
+}body {
+	font-family: 'Fira Code', monospace;
+	overflow-x: hidden;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.console-start {
+    display: flex;
+    flex-direction: column; /* Stack the child elements vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    min-height: 100vh; /* Make the section at least the height of the viewport */
+    text-transform: none;
+    font-style: normal;
+    font-size: 16px;
+    font-family: Raleway, "Times New Roman", Times, sans-serif;
+}
+
+/*******Header*****/
+header {
+    background-color: black;
+    padding: 0px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 20px;
+    position: fixed;
+}
+header h3 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #0073e6;
+    text-transform: uppercase;
+    padding-left: 10%;
+}
+header .navigation-bar a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0.8rem;
+    text-decoration: none;
+}
+
+header .navigation-bar a:hover{
+    color:  #0073e6;
+}
+#Home {
+    justify-content: space-between;
+    display: flex;
+    min-height: 100vh;
+    position: relative; /* Add this to make the pseudo-element position relative to #Home */
+    align-items: center;
+    color: #fff;
+    padding: 70px 10% 0;
+    /*#80a12e; */
+}
+
+#Home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('asset/webBackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Place it behind the content of #Home */
+}
+
+.section__pic-container {
+    display: flex;
+    height: 600px;
+    width: 600px;
+    margin: auto 0;
+  }
+
+.home-content{
+    max-width: 600px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight:700;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight:700;
+    margin: -3px 0;  
+    color:#0073e6
+}
+
+.home-content p{
+    font-size: 20px;
+    color:#0073e6;
+}
+
+.text{
+    color:#0073e6
+}
+
+/*** About ***/
+
+#About{
+    padding-top: 0;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-height: 60vh;
+    background-color:whitesmoke;
+}
+.About-container{
+    padding-top: 50px;
+    padding-bottom: 20px ;
+    padding-left:100px ;
+    padding-right:100px ;
+    color: black;
+    background-color: whitesmoke;
+}
+
+.About-container h2{
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  color:black;
+}
+
+.image-container{  
+     width: 500px; 
+     height: 500px; 
+     overflow: hidden;     
+ } 
+ .image-container img { 
+    width: 100%;
+    height: 100%; 
+}
+
+.About-container .row{
+    display: flex;
+    flex-wrap: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.About-container .discription{
+    margin-top: 100px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+/* Education section styles */
+#Education {
+    background-color: #f8f8f8; 
+    padding-top: 0;
+    padding-bottom: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-height: 50vh;
+}
+#Education h2{
+font-size: 30px;
+padding-bottom: 30px;
+text-align: center;
+}
+.education-item{
+    padding-bottom: 20px;
+ 
+}
+.container {
+    padding-top: 10%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.Education-item {
+    padding-top: 5%;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Course list styles */
+#courses {
+    display: none;
+}
+#courses h1{
+    text-align: center;
+}
+#courses h3{
+    text-align: center;
+}
+#courses a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Slide to the left by the width of the container */
+    }
+}
+
+/*** course
+/* ------------------------------------------------------------------- 
+ * ## tables - (_document-setup.scss)  
+ * ------------------------------------------------------------------- */
+
+ table {
+    border-width: 0;
+    width: 100%;
+    max-width: 100%;
+    font-family: "librebaskerville-regular", serif;
+}
+
+th, td {
+    padding: 1.5rem 3rem;
+    text-align: left;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+th {
+    color: #0D0A0B;
+    font-family: "montserrat-bold", sans-serif;
+}
+
+td {
+    line-height: 1.5;
+}
+
+th:first-child, td:first-child {
+    padding-left: 0;
+}
+
+th:last-child, td:last-child {
+    padding-right: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+li {
+    display: block;
+}
+/* ===================================================================
+ * # grid - (_grid.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+ .row {
+    width: 94%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row .row {
+    width: auto;
+    max-width: none;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+
+/* column blocks
+ * -------------------------------------- */
+
+[class*="col-"] {
+    float: left;
+}
+
+[class*="col-"] + [class*="col-"].end {
+    float: right;
+}
+
+[class*="col-"] {
+    padding: 0 20px;
+}
+
+
+/* column width classes 
+ * -------------------------------------- */
+
+.col-six, .col-1-2 {
+    width: 50%;
+    
+}
+/* Ensure both columns are side by side */
+.row.add-bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Set the width for each column */
+.col-six {
+    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
+    padding: 0 20px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -webkit-font-smoothing: auto;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-variant-ligatures: common-ligatures;
+    -moz-font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+}
+
+#skills h2 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+#skills p {
+    padding-top: 10px;   
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+    justify-items: center;
+    align-items: center;
+    grid-gap: 100px 0; /* Adjust the gap between skills */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* Style for individual skill items */
+.skill {
+    text-align: center;
+}
+
+/* Style for skill icons */
+.skill i {
+    font-size: 48px; /* Adjust the initial size as needed */
+    color: #0073e6; /* Change the color to match your design */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Hover effect to make icons pop out */
+.skill:hover i {
+    transform: scale(1.5); /* Increase the size on hover (adjust as needed) */
+}
+
+
+
+/* Portfolio */
+
+/* Reset some default styles for consistency */
+
+/* Apply general styles to the portfolio section */
+.portfolio {
+    text-align: center; 
+    background-color: #f4f4f4;
+    padding-top: 30px;
+}
+.portfolio-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Style the header */
+.portfolio-header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.portfolio-header h2 {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Style individual projects */
+.project {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-basis: calc(33.33% - 20px); /* Set the width of each project */
+    box-sizing: border-box;
+    position: relative; /* Needed for description positioning */
+}
+
+.project h3 {
+    font-size: 24px;
+}
+
+/* Style the project images */
+.project-image img {
+    max-width: 100%;
+    max-height: 150px; /* Set the maximum height of the images */
+    object-fit: cover; /* Maintain image aspect ratio and cover the container */
+   /* Add a smooth transition effect */
+}
+
+.project-image:hover img {
+    transform: scale(1.05); /* Enlarge the image slightly on hover */
+}
+
+/* Style the project descriptions */
+.project-description {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: left; /* Adjust the text alignment */
+    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 100%; /* Set the description height to 100% */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.project-image:hover .project-description {
+    opacity: 1;
+}
+
+/* Style the "Load more" button */
+.load-more button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.show-courses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Add some space above the button if needed */
+}
+
+.show-courses  button{
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.project-description a {
+    text-decoration: none;
+    color: black;
+}
+
+.load-more button:hover {
+    background-color: #555;
+}
+#contact {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Add your preferred background color */
+    min-height: 90vh;
+}
+
+#contact h2{
+    padding-top: 200px;
+    padding-bottom: 75px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-icons a {
+    margin: 0 20px; /* Adjust spacing between icons */
+    text-decoration: none;
+    color: black; /* Adjust icon color */
+    font-size: 100px; /* Increase icon size to 36px or adjust as needed */
+}
+
+
+.contact-icons a:hover {
+    color: #0073e6;; /* Adjust color on hover */
+}
