@@ -1,515 +1,573 @@
-*{
-    margin: 0;
-}body {
-	font-family: 'Fira Code', monospace;
-	overflow-x: hidden;
-    align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
+* {
+  margin: 0;
+}
+body {
+  font-family: "Fira Code", monospace;
+  overflow-x: hidden;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .console-start {
-    display: flex;
-    flex-direction: column; /* Stack the child elements vertically */
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
-    min-height: 100vh; /* Make the section at least the height of the viewport */
-    text-transform: none;
-    font-style: normal;
-    font-size: 16px;
-    font-family: Raleway, "Times New Roman", Times, sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack the child elements vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  min-height: 100vh; /* Make the section at least the height of the viewport */
+  text-transform: none;
+  font-style: normal;
+  font-size: 16px;
+  font-family: Raleway, "Times New Roman", Times, sans-serif;
 }
 
 /*******Header*****/
 header {
-    background-color: black;
-    padding: 0px;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 20px;
-    position: fixed;
+  background-color: black;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 20px;
+  position: fixed;
 }
 header h3 {
-    font-size: 2rem;
-    font-weight: bolder;
-    color: #0073e6;
-    text-transform: uppercase;
-    padding-left: 10%;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #0073e6;
+  text-transform: uppercase;
+  padding-left: 10%;
 }
 header .navigation-bar a {
-    color: #fff;
-    font-size: 20px;
-    margin: 0 0.8rem;
-    text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  margin: 0 0.8rem;
+  text-decoration: none;
 }
 
-header .navigation-bar a:hover{
-    color:  #0073e6;
+header .navigation-bar a:hover {
+  color: #0073e6;
 }
 #Home {
-    justify-content: space-between;
-    display: flex;
-    min-height: 100vh;
-    position: relative; /* Add this to make the pseudo-element position relative to #Home */
-    align-items: center;
-    color: #fff;
-    padding: 70px 10% 0;
-    /*#80a12e; */
+  justify-content: space-between;
+  display: flex;
+  min-height: 100vh;
+  position: relative; /* Make the pseudo-element position relative to Home */
+  align-items: center;
+  color: #fff;
+  padding: 70px 10% 0;
 }
 
 #Home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('asset/webBackground.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(2px); /* Adjust the blur radius as needed */
-    z-index: -1; /* Place it behind the content of #Home */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("asset/webBackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(2px); /* Adjust the blur radius as needed */
+  z-index: -1; /* Place it behind the content of #Home */
 }
 
 .section__pic-container {
-    display: flex;
-    height: 600px;
-    width: 600px;
-    margin: auto 0;
-  }
-
-.home-content{
-    max-width: 600px;
-}
-.home-content h3{
-    font-size: 32px;
-    font-weight:700;
-}
-.home-content h1{
-    font-size: 56px;
-    font-weight:700;
-    margin: -3px 0;  
-    color:#0073e6
+  display: flex;
+  height: 600px;
+  width: 600px;
+  margin: auto 0;
 }
 
-.home-content p{
-    font-size: 20px;
-    color:#0073e6;
+.home-content {
+  max-width: 600px;
+}
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  color: #0073e6;
 }
 
-.text{
-    color:#0073e6
+.home-content p {
+  font-size: 20px;
+  color: #0073e6;
 }
 
-/*** About ***/
-
-#About{
-    padding-top: 0;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    min-height: 60vh;
-    background-color:whitesmoke;
-}
-.About-container{
-    padding-top: 50px;
-    padding-bottom: 20px ;
-    padding-left:100px ;
-    padding-right:100px ;
-    color: black;
-    background-color: whitesmoke;
+.text {
+  color: #0073e6;
 }
 
-.About-container h2{
+/* About section styles */
+#About {
+  padding-top: 0;
+  padding-bottom: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  min-height: 60vh;
+  background-color: whitesmoke;
+}
+
+.About-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: black;
+  background-color: whitesmoke;
+}
+
+.About-container h2 {
   font-size: 30px;
   text-align: center;
-  padding-bottom: 20px;
-  color:black;
+  padding-bottom: 30px;
+  color: black;
+  margin-bottom: 30px; /* Space below the heading */
 }
 
-.image-container{  
-     width: 500px; 
-     height: 500px; 
-     overflow: hidden;     
- } 
- .image-container img { 
-    width: 100%;
-    height: 100%; 
+.About-container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  gap: 50px; /* Adds space between the columns */
 }
 
-.About-container .row{
-    display: flex;
-    flex-wrap: row;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 50px;
-}
-.About-container .discription{
-    margin-top: 100px;
-    margin-left: 100px;
-    text-align: center;
+.About-container .col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
 }
 
-/* Education section styles */
+.About-container .col:first-child {
+  flex: 0 0 45%; /* Set image column to 45% width */
+}
+
+.About-container .col:last-child {
+  flex: 1;
+  padding-left: 30px; /* Add space between image and description */
+  max-width: 55%; /* Set text column to a max width of 55% */
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px; /* Rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container without distortion */
+}
+
+.About-container .discription {
+  text-align: left; /* Left-align the description text */
+  font-size: 18px;
+  line-height: 1.6; /* Improve readability with line-height */
+  color: #333; /* Dark gray color for text */
+}
+
+.About-container .discription p {
+  margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+/* Education Section Styles */
 #Education {
-    background-color: #f8f8f8; 
-    padding-top: 0;
-    padding-bottom: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    min-height: 50vh;
+  background-color: #f8f8f8;
+  padding-top: 30px; /* Adjusted padding to give more space at the top */
+  padding-bottom: 100px; /* Adjusted padding to reduce excessive space at the bottom */
+  padding-left: 5%;
+  padding-right: 5%;
+  min-height: 50vh;
 }
-#Education h2{
-font-size: 30px;
-padding-bottom: 30px;
-text-align: center;
+
+#Education h2 {
+  font-size: 2rem; /* Slightly smaller font for a cleaner look */
+  padding-bottom: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px; /* Increased bottom margin for better spacing */
 }
-.education-item{
-    padding-bottom: 20px;
- 
+
+.education-item {
+  padding-bottom: 20px;
+  margin-bottom: 30px; /* Added more space between education items */
+  border-bottom: 1px solid #ddd; /* Subtle border for separation */
+  padding-bottom: 15px;
 }
+
+.education-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px; /* Space below the degree name */
+  color: #333;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #666; /* Slightly lighter color for readability */
+}
+
 .container {
-    padding-top: 10%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 10%;
 }
 
-.Education-item {
-    padding-top: 5%;
-    margin-bottom: 2rem;
+.show-courses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #333;
+.show-courses button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.show-courses button:hover {
+  background-color: #555; /* Darker background on hover */
 }
 
 /* Course list styles */
 #courses {
-    display: none;
+  display: none;
 }
-#courses h1{
-    text-align: center;
+#courses h1 {
+  text-align: center;
 }
-#courses h3{
-    text-align: center;
+#courses h3 {
+  text-align: center;
 }
 #courses a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 /* Keyframes for sliding animation */
 @keyframes slideLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%); /* Slide to the left by the width of the container */
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Slide to the left by the width of the container */
+  }
 }
 
-/*** course
-/* ------------------------------------------------------------------- 
- * ## tables - (_document-setup.scss)  
- * ------------------------------------------------------------------- */
+/*** course***/
 
- table {
-    border-width: 0;
-    width: 100%;
-    max-width: 100%;
-    font-family: "librebaskerville-regular", serif;
+table {
+  border-width: 0;
+  width: 100%;
+  max-width: 100%;
+  font-family: "librebaskerville-regular", serif;
 }
 
-th, td {
-    padding: 1.5rem 3rem;
-    text-align: left;
-    border-bottom: 1px solid #E8E8E8;
+th,
+td {
+  padding: 1.5rem 3rem;
+  text-align: left;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 th {
-    color: #0D0A0B;
-    font-family: "montserrat-bold", sans-serif;
+  color: #0d0a0b;
+  font-family: "montserrat-bold", sans-serif;
 }
 
 td {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
-th:first-child, td:first-child {
-    padding-left: 0;
+th:first-child,
+td:first-child {
+  padding-left: 0;
 }
 
-th:last-child, td:last-child {
-    padding-right: 0;
+th:last-child,
+td:last-child {
+  padding-right: 0;
 }
 
 .table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 li {
-    display: block;
+  display: block;
 }
-/* ===================================================================
- * # grid - (_grid.scss)
+/* 
+ * # grid
  *
- * ------------------------------------------------------------------- */
+ * */
 
- .row {
-    width: 94%;
-    max-width: 1200px;
-    margin: 0 auto;
+.row {
+  width: 94%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .row .row {
-    width: auto;
-    max-width: none;
-    margin-left: -20px;
-    margin-right: -20px;
+  width: auto;
+  max-width: none;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
-.col-full{
-    width: 100%;
+.col-full {
+  width: 100%;
 }
-
 
 /* column blocks
  * -------------------------------------- */
 
 [class*="col-"] {
-    float: left;
+  float: left;
 }
 
 [class*="col-"] + [class*="col-"].end {
-    float: right;
+  float: right;
 }
 
 [class*="col-"] {
-    padding: 0 20px;
+  padding: 0 20px;
 }
-
 
 /* column width classes 
  * -------------------------------------- */
 
-.col-six, .col-1-2 {
-    width: 50%;
-    
+.col-six,
+.col-1-2 {
+  width: 50%;
 }
 /* Ensure both columns are side by side */
 .row.add-bottom {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Set the width for each column */
 .col-six {
-    flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
-    padding: 0 20px; /* Adjust padding as needed */
-    box-sizing: border-box;
+  flex: 0 0 calc(50% - 20px); /* Adjust the width as needed */
+  padding: 0 20px; /* Adjust padding as needed */
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    -webkit-font-smoothing: auto;
-    -webkit-font-smoothing: antialiased;
-    -webkit-font-variant-ligatures: common-ligatures;
-    -moz-font-variant-ligatures: common-ligatures;
-    font-variant-ligatures: common-ligatures;
-    text-rendering: optimizeLegibility;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-variant-ligatures: common-ligatures;
+  -moz-font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+#skills {
+  padding-top: 50px;
+  padding-bottom: 70px;
 }
 
 #skills h2 {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-
 
 #skills p {
-    padding-top: 10px;   
+  padding-top: 10px;
 }
 
+/* Skill container for grid layout */
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-    justify-items: center;
-    align-items: center;
-    grid-gap: 100px 0; /* Adjust the gap between skills */
-    margin: 0 auto; /* Center the grid horizontally */
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* Adjust the number of columns as needed */
+  justify-items: center;
+  align-items: center;
+  gap: 50px; /* Reduced the gap to improve spacing */
+  margin: 0 auto;
 }
 
-/* Style for individual skill items */
+/* Unified icon styling for all skills */
+.skill .icon {
+  width: 50px; /* Adjust size for better balance */
+  height: 50px;
+  object-fit: contain; /* Ensures logos maintain aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for icons */
+.skill:hover .icon {
+  transform: scale(1.3);
+}
+
+/* Skill item layout */
 .skill {
-    text-align: center;
+  text-align: center;
+  padding: 10px;
 }
-
-/* Style for skill icons */
-.skill i {
-    font-size: 48px; /* Adjust the initial size as needed */
-    color: #0073e6; /* Change the color to match your design */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-}
-
-/* Hover effect to make icons pop out */
-.skill:hover i {
-    transform: scale(1.5); /* Increase the size on hover (adjust as needed) */
-}
-
-
 
 /* Portfolio */
 
-/* Reset some default styles for consistency */
-
-/* Apply general styles to the portfolio section */
 .portfolio {
-    text-align: center; 
-    background-color: #f4f4f4;
-    padding-top: 30px;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding-top: 100px;
 }
 .portfolio-projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.portfolio-header {
+  margin-bottom: 40px; /* Add space below the header */
 }
 
 /* Style the header */
 .portfolio-header h1 {
-    font-size: 28px;
-    color: #333;
+  font-size: 28px;
+  color: #333;
 }
 
 .portfolio-header h2 {
-    font-size: 20px;
-    color: #666;
+  font-size: 20px;
+  color: #666;
 }
 
 /* Style individual projects */
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-    flex-basis: calc(33.33% - 20px); /* Set the width of each project */
-    box-sizing: border-box;
-    position: relative; /* Needed for description positioning */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex-basis: calc(33.33% - 20px); /* Set the width of each project */
+  box-sizing: border-box;
+  position: relative; /* Needed for description positioning */
 }
 
 .project h3 {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+.project-description p {
+  margin-bottom: 15px; /* Adds space below each paragraph */
 }
 
 /* Style the project images */
 .project-image img {
-    max-width: 100%;
-    max-height: 150px; /* Set the maximum height of the images */
-    object-fit: cover; /* Maintain image aspect ratio and cover the container */
-   /* Add a smooth transition effect */
+  max-width: 100%;
+  max-height: 150px; /* Set the maximum height of the images */
+  object-fit: cover; /* Maintain image aspect ratio and cover the container */
 }
 
 .project-image:hover img {
-    transform: scale(1.05); /* Enlarge the image slightly on hover */
+  transform: scale(1.05); /* Enlarge the image slightly on hover */
 }
 
 /* Style the project descriptions */
 .project-description {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    text-align: left; /* Adjust the text alignment */
-    transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    height: 100%; /* Set the description height to 100% */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  text-align: left; /* Adjust the text alignment */
+  transition: opacity 0.3s ease-in-out; /* Add a smooth transition effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 100%; /* Set the description height to 100% */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .project-image:hover .project-description {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Style the "Load more" button */
 .load-more button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.show-courses {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px; /* Add some space above the button if needed */
-}
-
-.show-courses  button{
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .project-description a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .load-more button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 #contact {
-    text-align: center;
-    padding: 20px;
-    background-color: #f7f7f7; /* Add your preferred background color */
-    min-height: 90vh;
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7; /* Add your preferred background color */
+  min-height: 90vh;
 }
 
-#contact h2{
-    padding-top: 200px;
-    padding-bottom: 75px;
+#contact h2 {
+  padding-top: 200px;
+  padding-bottom: 75px;
 }
 
 .contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-icons a {
-    margin: 0 20px; /* Adjust spacing between icons */
-    text-decoration: none;
-    color: black; /* Adjust icon color */
-    font-size: 100px; /* Increase icon size to 36px or adjust as needed */
+  margin: 0 20px; /* Adjust spacing between icons */
+  text-decoration: none;
+  color: black; /* Adjust icon color */
+  font-size: 100px; /* Increase icon size to 36px or adjust as needed */
 }
 
-
 .contact-icons a:hover {
-    color: #0073e6;; /* Adjust color on hover */
+  color: #0073e6; /* Adjust color on hover */
 }
